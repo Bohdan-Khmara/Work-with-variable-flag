@@ -1,16 +1,18 @@
 /**
- * Value checking function. Task 3
- * @type {number[]}
+ * Value division function. Task 4
+ * @type {number}
  */
-let arr = [1, 2, 3, 4, 5];
+let userInput = Number(prompt('input your value'));
+let arr = [];
 
-function hasNumber(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === 5) {
-            return alert('есть');
+function hasNumber(userInput) {
+    for (let i = 1; i <= userInput; i++) {
+        arr.push(i);
+        if (userInput / i === 1) {
+            return true;
         }
     }
-    return alert('нет');
+    return false;
 }
 
-hasNumber(arr);
+hasNumber(userInput);
