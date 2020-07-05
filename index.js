@@ -1,18 +1,16 @@
 /**
- * Value division function. Task 4
- * @type {number}
+ * Check if current and next are equal. Task 5
+ * @type {number[]}
  */
-let userInput = Number(prompt('input your value'));
-let arr = [];
+let arr = [1, 2, 2, 4, 5];
 
-function hasNumber(userInput) {
-    for (let i = 1; i <= userInput; i++) {
-        arr.push(i);
-        if (userInput / i === 1) {
-            return true;
+function hasNumber(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === arr[i + 1]) {
+            return alert('да');
         }
     }
-    return false;
+    return alert('нет');
 }
 
-hasNumber(userInput);
+hasNumber(arr);
